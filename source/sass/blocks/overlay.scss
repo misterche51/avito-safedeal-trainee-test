@@ -1,0 +1,33 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 10;
+    display: none;
+    background-color: $modal-background-color;
+
+    &--active {
+        display: block;
+    }
+
+
+    @media (min-width: $desktop-width) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        display: none;
+        z-index: 10;
+        background-color: rgba(0, 0, 0, 0.7);
+
+        &--active {
+            display: block;
+        }
+    }
+
+}

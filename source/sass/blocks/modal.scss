@@ -1,0 +1,113 @@
+.modal {
+    width: 100%;
+    padding: 30px 22px 48px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: $modal-background-color;
+    display: none;
+    z-index: 11;
+
+    &__photo {
+        margin-top: -30px;
+        margin-left: -22px;
+        margin-right: -22px;
+    }
+
+    &__close-button {
+        padding: 0;
+        margin: 0;
+        border: 0;
+        width: 18px;
+        height: 18px;
+        background-color: transparent;
+        position: absolute;
+        top: 21px;
+        right: 21px;
+        &::before,
+        &::after {
+            position: absolute;
+            top: -4px;
+            left: 8px;
+            content: "";
+            height: 25px;
+            width: 1px;
+            background-color:#000000;
+        }
+        &::before {
+            transform: rotate(45deg);
+        }
+        &::after {
+            transform: rotate(-45deg);
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 65%;
+    }
+
+    &__comments {
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+
+        max-height: 60%;
+        overflow: hidden;
+
+        &-item {
+            & + & {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    &__form {
+       margin-top: auto;
+    }
+
+    &--active {
+        display: block;
+    }
+
+
+    @media (min-width: $desktop-width) {
+        position: fixed;
+        top: 23.6%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 619px;
+        height: 425px;
+        padding: 30px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        display: none;
+
+        &__photo {
+            margin: 0;
+        }
+
+        &__comments {
+            margin-top: 4px;
+            margin-left: 14px;
+            max-height: 300px;
+            overflow: hidden;
+        }
+
+        &__form {
+            margin-top: 0;
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            width: 332px;
+        }
+        &--active {
+            display: flex;
+        }
+    }
+}

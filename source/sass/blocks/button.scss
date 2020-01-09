@@ -1,0 +1,10 @@
+.button {
+    border: 0;
+    background-color: $button-background-fill-color;
+    border-radius: 3px;
+    font-size: $fs-small;
+    text-align: center;
+    color: $button-text-color;
+    width: 100%;
+    min-height: 30px;
+}

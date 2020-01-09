@@ -1,0 +1,15 @@
+.header {
+    width: 100%;
+    min-height: 81px;
+    &__title {
+        margin: 0;
+        padding: 0;
+        padding-top: 15px;
+        padding-bottom: 30px;
+        font-family: "RobotoCondensed", Helvetica, Arial, sans-serif;
+        text-transform: uppercase;
+        font-size: $fs-large;
+        line-height: 1.16;
+        text-align: center;
+    }
+}

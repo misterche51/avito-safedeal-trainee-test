@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>TEST APP</title>
+</head>
+<body>
+  <header class="header">
+    <h1 class="header__title">Test app</h1>
+  </header>
+  <main class="main">
+    <div class="info">
+      <p class="info__content"></p>
+    </div>
+    <div class="wrapper">
+      <section class="main__gallery gallery">
+        <ul class="gallery__list"></ul>
+      </section>
+    </div>
+  </main>
+  <footer class="footer">
+    <p class="footer__copyright">&#169 2018-2019</p>
+  </footer>
+  <div class="overlay"></div>
+  <div class="modal">
+    <div class="modal__photo photo">
+      <div class="photo__wrapper">
+        <div class="photo__inner">
+          <img src="" alt="Та фотография, что тебя заинтересовала" class="photo__img">
+        </div>
+      </div>
+    </div>
+    <div class="modal__wrapper">
+      <div class="modal__comments">
+      </div>
+      <form action="https://boiling-refuge-66454.herokuapp.com/images/" name ="new_comment" method = "POST" class="modal__form form">
+        <fieldset class="form__fieldset">
+          <label for="name" class="visually-hidden">Имя</label>
+          <input type="text" name="name" id="name" class="form__field form__field--name" placeholder="Ваше имя" required>
+          <textarea name="text" id="text" class="form__field form__field--message" placeholder="Ваш комментарий" rows="1" maxlength="400" required style></textarea>
+          <label for="text" class="visually-hidden">Комментарий</label>
+        </fieldset>
+        <button type="submit" class="form__button-submit button">Оставить комментарий</button>
+      </form>
+    </div>
+    <button type="button" class="modal__close-button"></button>
+  </div>
+
+  <template id="preview" style="display:none">
+    <li class="gallery__item">
+      <a href="#" class="gallery__item-link">
+        <picture>
+          <source srcset="" media="(min-width: 768px)">
+          <img src="" alt="Случайная фотография" class="gallery__item-preview" width="280" height="171">
+        </picture>
+      </a>
+    </li>
+  </template>
+
+  <template id="comment" style="display:none">
+    <div class="modal__comments-item comment">
+      <span class="comment__date">18.12.2019</span>
+      <p class="comment__message"></p>
+    </div>
+  </template>
+
+
+  <script type="module" src="js/api.js"></script>
+  <script type="module" src="js/render.js"></script>
+  <script type="module" src="js/gallery.js"></script>
+  <script type="module" src="js/form.js"></script>
+  <script type="module" src="js/big-picture.js"></script>
+
+</body>
+</html>

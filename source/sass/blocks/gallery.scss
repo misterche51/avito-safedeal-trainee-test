@@ -1,0 +1,25 @@
+.gallery {
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        margin-bottom: 118px;
+        display: grid;
+        grid-template-rows: repeat(auto-fill, 171px);
+        grid-row-gap: 30px;
+        justify-content: space-around;
+    }
+
+    &__item {
+        overflow: hidden;
+    }
+
+    @media (min-width: $desktop-width) {
+        &__list {
+            grid-template-columns: repeat(auto-fill, 229px);
+            grid-column-gap: 20px;
+            grid-template-rows: repeat(auto-fill, 142px);
+        }
+    }
+}
